@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>妙可净 it's smile - 轻松呵护 亲肤好衣</title>
+  <meta name="description" content="妙可净 it's smile，专注植物配方洗护产品研发。婴幼儿洗衣液、柠檬洗洁精，天然安心，呵护全家。">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">妙</div>
+        <div class="logo-text">
+          <span class="company-name">妙可净</span>
+          <span class="company-sub">it's smile</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html" class="active">首页</a>
+        <a href="products.html">全部产品</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn">🛒 <span class="cart-badge"></span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Slider -->
+  <section class="hero">
+    <div class="hero-slider">
+      <!-- Slide 1: Lavender Product -->
+      <div class="hero-slide hero-slide-purple active">
+        <div class="hero-content">
+          <span class="hero-tag">婴幼儿专用洗护专家</span>
+          <h1 class="hero-title">轻松呵护<br>亲肤好衣</h1>
+          <p class="hero-desc">精选天然薰衣草精华，植物配方温润好肤。真净蛋白深层焕活，给宝宝最温柔的呵护。高洁温和，一包小小的，宝贝大大的爱。</p>
+          <div class="hero-btns">
+            <a href="product-detail.html?id=1" class="btn btn-primary btn-lg">了解详情</a>
+            <a href="products.html" class="btn btn-outline btn-lg">查看全部</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-product-visual purple">
+            <div class="bottle-shape"></div>
+            <div class="product-label">薰衣草洗衣液</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 2: Lemon Product -->
+      <div class="hero-slide hero-slide-yellow">
+        <div class="hero-content">
+          <span class="hero-tag" style="color:var(--secondary-dark);">去除油污除菌专家</span>
+          <h1 class="hero-title">本草洗护<br>全净呵护</h1>
+          <p class="hero-desc">天然柠檬精华，抑菌净享。强效去油净味，花香焕新。天然植物精华洁净更安心，让每一餐都安心健康。</p>
+          <div class="hero-btns">
+            <a href="product-detail.html?id=2" class="btn btn-secondary btn-lg">了解详情</a>
+            <a href="products.html" class="btn btn-outline btn-lg">查看全部</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-product-visual yellow">
+            <div class="bottle-shape"></div>
+            <div class="product-label">柠檬洗洁精</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 3: Brand -->
+      <div class="hero-slide hero-slide-brand">
+        <div class="hero-content">
+          <span class="hero-tag">品质升级 呵护更多</span>
+          <h1 class="hero-title">妙可净<br>洁净生活</h1>
+          <p class="hero-desc">妙可净 it's smile，专注植物配方洗护产品研发。从源头精选优质原料，用科技守护每一个家庭的健康与洁净。</p>
+          <div class="hero-btns">
+            <a href="products.html" class="btn btn-primary btn-lg">探索产品</a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="hero-product-visual purple" style="background:linear-gradient(135deg, var(--primary-light), var(--primary));width:320px;">
+            <div style="font-size:2.5rem;font-weight:900;opacity:0.9;">妙可净</div>
+            <div style="font-size:1rem;opacity:0.7;margin-top:4px;">it's smile</div>
+            <div class="product-label">洁净 · 安心 · 呵护</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="hero-arrow prev">‹</button>
+    <button class="hero-arrow next">›</button>
+    <div class="hero-dots">
+      <span class="hero-dot active" data-index="0"></span>
+      <span class="hero-dot" data-index="1"></span>
+      <span class="hero-dot" data-index="2"></span>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">为什么选择妙可净</span>
+        <h2 class="section-title">四大核心优势</h2>
+        <p class="section-desc">我们坚持以天然植物为核心，用科技守护每一个家庭的健康与洁净</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon purple">🌿</div>
+          <h3>植物配方</h3>
+          <p>精选天然植物精华，不含有害化学成分，温和不刺激，安心守护全家健康</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon green">🧬</div>
+          <h3>真净蛋白技术</h3>
+          <p>独特蛋白酶深层分解技术，有效分解顽固污渍，洁净力提升3倍</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon blue">👶</div>
+          <h3>亲肤安全</h3>
+          <p>通过多项安全检测认证，pH值温和，适合婴幼儿衣物及敏感肌肤人群使用</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon orange">🍋</div>
+          <h3>天然抑菌</h3>
+          <p>天然柠檬精华与茶树精油，99.9%抑菌率，从源头杜绝细菌滋生</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Brand Story -->
+  <section class="section brand-story">
+    <div class="container">
+      <div class="brand-grid">
+        <div class="brand-image">
+          <div class="brand-image-inner">
+            <div class="brand-year">妙可净</div>
+            <div class="brand-name-large">洁净生活</div>
+            <p style="margin-top:16px;opacity:0.9;font-size:1rem;">用心做好每一款产品</p>
+          </div>
+        </div>
+        <div class="brand-info">
+          <h3>关于妙可净</h3>
+          <p>妙可净 it's smile 坐落于美丽的绍兴，是一家专注于植物配方洗护产品研发、生产与销售的现代化品牌。</p>
+          <p>公司秉承"洁净、安心、呵护"的品牌理念，从源头精选优质天然原料，运用先进的生物酶技术和植物提取工艺，为消费者提供安全、高效、环保的洗护解决方案。</p>
+          <p>我们的产品涵盖婴幼儿洗衣液、厨房洗洁精、家居清洁等多个品类，致力于为每一个家庭带来更健康、更洁净的生活体验。</p>
+          <div class="brand-stats">
+            <div class="stat-item">
+              <div class="stat-number">100%</div>
+              <div class="stat-label">植物配方</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">99.9%</div>
+              <div class="stat-label">抑菌率</div>
+            </div>
+            <div class="stat-item">
+              <div class="stat-number">0</div>
+              <div class="stat-label">有害添加</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">我们的产品</span>
+        <h2 class="section-title">精选洗护产品</h2>
+        <p class="section-desc">每一款产品都经过严格的品质检测，只为给您最好的洁净体验</p>
+      </div>
+      <div class="products-grid" id="home-products"></div>
+      <div class="text-center mt-40">
+        <a href="products.html" class="btn btn-outline btn-lg">查看全部产品 →</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ingredients -->
+  <section class="section ingredients-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">天然成分</span>
+        <h2 class="section-title">精选植物精华 呵护好肤</h2>
+        <p class="section-desc">每一种成分都来自大自然的馈赠，安全可靠</p>
+      </div>
+      <div class="ingredients-grid">
+        <div class="ingredient-card">
+          <div class="ingredient-icon" style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);">💜</div>
+          <h3>薰衣草精华</h3>
+          <p>源自优质薰衣草产区，天然舒缓安神，温和呵护宝宝肌肤。具有天然抑菌功效，让衣物清香持久。</p>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon" style="background:linear-gradient(135deg,#fefce8,#fef08a);">🍋</div>
+          <h3>天然柠檬精华</h3>
+          <p>精选优质柠檬果实萃取，天然去油除味能力卓越。富含柠檬酸，有效分解油脂，抑菌率高达99.9%。</p>
+        </div>
+        <div class="ingredient-card">
+          <div class="ingredient-icon" style="background:linear-gradient(135deg,#f0fdf4,#bbf7d0);">🎋</div>
+          <h3>竹纤维提取物</h3>
+          <p>天然竹纤维具有优异的抗菌防霉性能，吸水性强，环保可降解。是理想的厨房清洁伴侣。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonial / 小洁心语 -->
+  <section class="section testimonial-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">小洁心语</span>
+        <h2 class="section-title">用户心声</h2>
+      </div>
+      <div class="testimonial-card">
+        <div class="testimonial-avatar">👩</div>
+        <p class="testimonial-text">"自从用了妙可净薰衣草洗衣液，宝宝的衣服洗完特别柔软，淡淡的薰衣草香味很好闻。最重要的是成分天然安全，用着很放心。已经推荐给身边好几个宝妈了！"</p>
+        <div class="testimonial-author">张女士</div>
+        <div class="testimonial-role">二胎妈妈 · 使用妙可净产品1年</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="section" style="background:linear-gradient(135deg, var(--primary), var(--primary-dark));color:white;text-align:center;">
+    <div class="container">
+      <h2 style="font-size:2.2rem;font-weight:800;margin-bottom:16px;">开始体验妙可净洁净生活</h2>
+      <p style="font-size:1.1rem;opacity:0.9;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;">精选植物配方，呵护每一位家人。现在下单，满99元免运费。</p>
+      <a href="products.html" class="btn btn-secondary btn-lg">立即选购</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">妙</div>
+            <div class="logo-text">
+              <span class="company-name">妙可净</span>
+              <span class="company-sub" style="color:var(--gray-500);">it's smile</span>
+            </div>
+          </div>
+          <p>妙可净 it's smile，专注植物配方洗护产品研发，为每一个家庭带来更健康、更洁净的生活体验。</p>
+          <div class="footer-social">
+            <a href="#" title="微信">微</a>
+            <a href="#" title="微博">博</a>
+            <a href="#" title="抖音">抖</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>产品中心</h4>
+          <a href="product-detail.html?id=1">薰衣草婴幼儿洗衣液</a>
+          <a href="product-detail.html?id=2">柠檬去油洗洁精</a>
+          <a href="products.html">全部产品</a>
+        </div>
+        <div class="footer-col">
+          <h4>服务支持</h4>
+          <a href="cart.html">购物车</a>
+          <a href="#">售后服务</a>
+          <a href="#">常见问题</a>
+          <a href="admin.html" style="margin-top:16px;opacity:0.5;font-size:0.8rem;">管理后台</a>
+        </div>
+        <div class="footer-col">
+          <h4>联系我们</h4>
+          <a href="#">地址：浙江省绍兴市</a>
+          <a href="#">电话：400-XXX-XXXX</a>
+          <a href="#">邮箱：contact@zhijie.com</a>
+          <a href="#">工作时间：周一至周五 9:00-18:00</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2024 绍兴智洁洗涤用品科技有限公司 版权所有</span>
+        <span>浙ICP备XXXXXXXX号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

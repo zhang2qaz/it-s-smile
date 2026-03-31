@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>订单管理后台 - 妙可净后台</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">妙</div>
+        <div class="logo-text">
+          <span class="company-name">妙可净</span>
+          <span class="company-sub">it's smile</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="admin.html" class="active">订单管理</a>
+        <a href="orders.html">客户订单</a>
+        <a href="index.html">返回前台</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn">🛒 <span class="cart-badge"></span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Admin Page -->
+  <div class="admin-page">
+    <div class="container">
+      <h1 class="page-title">⚙️ 订单管理后台</h1>
+
+      <div class="admin-layout">
+        <!-- Sidebar -->
+        <aside class="admin-sidebar">
+          <h3>管理菜单</h3>
+          <nav class="admin-nav">
+            <a href="#" class="active" onclick="showAdminSection('dashboard')">📊 数据概览</a>
+            <a href="#" onclick="showAdminSection('orders')">📋 订单管理</a>
+            <a href="#" onclick="showAdminSection('products')">📦 产品管理</a>
+          </nav>
+        </aside>
+
+        <!-- Main Content -->
+        <div class="admin-content">
+          <!-- Stats -->
+          <div class="admin-stats">
+            <div class="stat-card">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#eff6ff,#bfdbfe);color:#2563eb;">📊</div>
+              <div class="stat-value" id="stat-total">0</div>
+              <div class="stat-label">总订单数</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#fef3c7,#fde68a);color:#d97706;">⏳</div>
+              <div class="stat-value" id="stat-pending">0</div>
+              <div class="stat-label">待处理</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#e0e7ff,#c7d2fe);color:#4f46e5;">🚚</div>
+              <div class="stat-value" id="stat-processing">0</div>
+              <div class="stat-label">处理/发货中</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-icon" style="background:linear-gradient(135deg,#dcfce7,#bbf7d0);color:#16a34a;">💰</div>
+              <div class="stat-value" id="stat-revenue">¥0.00</div>
+              <div class="stat-label">总营收</div>
+            </div>
+          </div>
+
+          <!-- Orders Table -->
+          <div class="admin-table-wrap">
+            <div class="admin-table-header">
+              <h3>订单列表</h3>
+              <div class="admin-table-filters">
+                <select id="admin-status-filter" onchange="renderAdminOrders(this.value)">
+                  <option value="all">全部状态</option>
+                  <option value="pending">待处理</option>
+                  <option value="processing">处理中</option>
+                  <option value="shipped">已发货</option>
+                  <option value="delivered">已完成</option>
+                  <option value="cancelled">已取消</option>
+                </select>
+                <button class="btn btn-sm btn-outline" onclick="exportOrders()">导出数据</button>
+              </div>
+            </div>
+            <div style="overflow-x:auto;">
+              <table class="admin-table">
+                <thead>
+                  <tr>
+                    <th>订单号</th>
+                    <th>客户</th>
+                    <th>电话</th>
+                    <th>商品</th>
+                    <th>金额</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                  </tr>
+                </thead>
+                <tbody id="admin-orders-tbody">
+                  <!-- Rendered by JS -->
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Order Detail Modal -->
+  <div class="modal-overlay" id="order-detail-modal" onclick="if(event.target===this)closeModal('order-detail-modal')">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>订单详情</h2>
+        <button class="modal-close" onclick="closeModal('order-detail-modal')">✕</button>
+      </div>
+      <div id="order-detail-content">
+        <!-- Rendered by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2024 绍兴智洁洗涤用品科技有限公司 版权所有</span>
+        <span>浙ICP备XXXXXXXX号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    function showAdminSection(section) {
+      // Update nav active state
+      document.querySelectorAll('.admin-nav a').forEach(a => a.classList.remove('active'));
+      event.target.classList.add('active');
+
+      if (section === 'products') {
+        showToast('产品管理功能开发中', 'info');
+      }
+    }
+
+    function exportOrders() {
+      const orders = orderManager.orders;
+      if (orders.length === 0) {
+        showToast('暂无订单数据可导出', 'error');
+        return;
+      }
+
+      // Generate CSV
+      const headers = ['订单号', '客户姓名', '电话', '地址', '商品', '金额', '状态', '下单时间'];
+      const rows = orders.map(o => [
+        o.id,
+        o.customer.name,
+        o.customer.phone,
+        `${o.customer.province} ${o.customer.city} ${o.customer.address}`,
+        o.items.map(i => `${i.name}x${i.quantity}`).join('; '),
+        o.total.toFixed(2),
+        getStatusText(o.status),
+        formatDate(o.createdAt)
+      ]);
+
+      const csvContent = '\uFEFF' + [headers, ...rows].map(r =>
+        r.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(',')
+      ).join('\n');
+
+      const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+      const url = URL.createObjectURL(blob);
+      const link = document.createElement('a');
+      link.href = url;
+      link.download = `妙可净订单_${new Date().toISOString().slice(0,10)}.csv`;
+      link.click();
+      URL.revokeObjectURL(url);
+      showToast('订单数据已导出');
+    }
+  </script>
+</body>
+</html>

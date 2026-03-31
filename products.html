@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>全部产品 - 妙可净 it's smile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">妙</div>
+        <div class="logo-text">
+          <span class="company-name">妙可净</span>
+          <span class="company-sub">it's smile</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="products.html" class="active">全部产品</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn">🛒 <span class="cart-badge"></span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Products Page -->
+  <div style="margin-top:72px;padding:40px 0;">
+    <div class="container">
+      <div class="section-header" style="margin-bottom:40px;">
+        <span class="section-tag">产品中心</span>
+        <h2 class="section-title">全部产品</h2>
+        <p class="section-desc">精选植物配方洗护产品，呵护您和家人的每一天</p>
+      </div>
+
+      <!-- Filter -->
+      <div style="display:flex;gap:8px;margin-bottom:32px;flex-wrap:wrap;">
+        <button class="btn btn-primary btn-sm" onclick="filterProducts('all')" data-filter="all">全部</button>
+        <button class="btn btn-outline btn-sm" onclick="filterProducts('baby')" data-filter="baby">婴幼儿洗护</button>
+        <button class="btn btn-outline btn-sm" onclick="filterProducts('kitchen')" data-filter="kitchen">厨房清洁</button>
+      </div>
+
+      <div class="products-grid" id="all-products"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2024 绍兴智洁洗涤用品科技有限公司 版权所有</span>
+        <span>浙ICP备XXXXXXXX号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+  <script>
+    function filterProducts(category) {
+      const container = document.getElementById('all-products');
+      const products = category === 'all'
+        ? PRODUCTS
+        : PRODUCTS.filter(p => p.category === category);
+
+      // Update button states
+      document.querySelectorAll('[data-filter]').forEach(btn => {
+        if (btn.dataset.filter === category) {
+          btn.className = 'btn btn-primary btn-sm';
+        } else {
+          btn.className = 'btn btn-outline btn-sm';
+        }
+      });
+
+      container.innerHTML = products.map(p => `
+        <div class="product-card" onclick="window.location.href='product-detail.html?id=${p.id}'">
+          <div class="product-card-image ${getColorClass(p.color)}">
+            ${p.badge ? `<span class="product-badge ${getBadgeClass(p.badge)}">${getBadgeText(p.badge)}</span>` : ''}
+            <div class="product-visual ${getBottleClass(p.color)}">${getBottleLabel(p.color)}<br><small>it's smile</small></div>
+          </div>
+          <div class="product-card-body">
+            <div class="product-card-title">${p.name}</div>
+            <div class="product-card-desc">${p.description}</div>
+            <div class="product-card-footer">
+              <div class="product-price">
+                <span class="currency">¥</span>${formatPrice(p.price)}
+                ${p.originalPrice ? `<span class="original">¥${formatPrice(p.originalPrice)}</span>` : ''}
+              </div>
+              <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); cart.addItem(${p.id})">加入购物车</button>
+            </div>
+          </div>
+        </div>
+      `).join('');
+
+      if (products.length === 0) {
+        container.innerHTML = '<div class="cart-empty"><p>该分类暂无产品</p></div>';
+      }
+    }
+  </script>
+</body>
+</html>

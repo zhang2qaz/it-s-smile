@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>购物车 - 妙可净 it's smile</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="nav container">
+      <a href="index.html" class="logo">
+        <div class="logo-icon">妙</div>
+        <div class="logo-text">
+          <span class="company-name">妙可净</span>
+          <span class="company-sub">it's smile</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a href="index.html">首页</a>
+        <a href="products.html">全部产品</a>
+      </div>
+      <div class="nav-actions">
+        <a href="cart.html" class="cart-btn" style="color:var(--primary);">🛒 <span class="cart-badge"></span></a>
+        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Cart Page -->
+  <div class="cart-page">
+    <div class="container">
+      <h1 class="page-title">🛒 购物车</h1>
+      <div class="cart-layout">
+        <div class="cart-items" id="cart-items">
+          <!-- Rendered by JS -->
+        </div>
+        <div class="cart-summary">
+          <h3>订单摘要</h3>
+          <div id="cart-summary-content">
+            <!-- Rendered by JS -->
+          </div>
+          <button class="btn btn-primary checkout-btn" onclick="proceedToCheckout()">去结算</button>
+          <a href="products.html" class="btn btn-outline checkout-btn" style="margin-top:8px;">继续购物</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom" style="border-top:none;padding-top:0;">
+        <span>&copy; 2024 绍兴智洁洗涤用品科技有限公司 版权所有</span>
+        <span>浙ICP备XXXXXXXX号</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
