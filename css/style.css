@@ -133,34 +133,27 @@ input:focus, select:focus, textarea:focus {
   color: var(--primary);
 }
 
-.logo-icon {
-  width: 42px;
-  height: 42px;
+.logo-full {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
   background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.1rem;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.logo-cn {
+  font-size: 1.5rem;
   font-weight: 800;
+  letter-spacing: 2px;
 }
 
-.logo-text {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.2;
-}
-
-.logo-text .company-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-}
-
-.logo-text .company-sub {
-  font-size: 0.7rem;
-  color: var(--gray-500);
-  font-weight: 400;
+.logo-en {
+  font-size: 0.85rem;
+  font-weight: 600;
+  font-style: italic;
+  letter-spacing: 0.5px;
 }
 
 .nav-links {
