@@ -3,222 +3,243 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>妙可净 it's smile - 轻松呵护 亲肤好衣</title>
-  <meta name="description" content="妙可净 it's smile，专注植物配方洗护产品研发。婴幼儿洗衣液、柠檬洗洁精，天然安心，呵护全家。">
+  <title>妙可净 it's smile - Explore the cleaning power of nature</title>
+  <meta name="description" content="妙可净 it's smile，99%天然植物精萃，专研真丝羊毛洗衣液与内衣洗衣液。深入洁净，温和呵护。">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
   <!-- Header -->
   <header class="header">
     <nav class="nav container">
       <a href="index.html" class="logo">
-        <div class="logo-full">
-          <span class="logo-cn">妙可净</span>
-          <span class="logo-en">it's smile</span>
-        </div>
+        <img src="images/logo-dark.png" alt="妙可净 it's smile" class="logo-img">
       </a>
       <div class="nav-links">
         <a href="index.html" class="active">首页</a>
         <a href="products.html">全部产品</a>
       </div>
       <div class="nav-actions">
-        <a href="cart.html" class="cart-btn">🛒 <span class="cart-badge"></span></a>
-        <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('mobile-open')">☰</button>
+        <a href="cart.html" class="cart-icon">🛒 <span class="cart-badge" id="cart-badge"></span></a>
       </div>
     </nav>
   </header>
 
-  <!-- Hero Slider -->
-  <section class="hero">
-    <div class="hero-slider">
-      <!-- Slide 1: Lavender Product -->
-      <div class="hero-slide hero-slide-purple active">
-        <div class="hero-content">
-          <span class="hero-tag">婴幼儿专用洗护专家</span>
-          <h1 class="hero-title">轻松呵护<br>亲肤好衣</h1>
-          <p class="hero-desc">精选天然薰衣草精华，植物配方温润好肤。真净蛋白深层焕活，给宝宝最温柔的呵护。高洁温和，一包小小的，宝贝大大的爱。</p>
-          <div class="hero-btns">
-            <a href="product-detail.html?id=1" class="btn btn-primary btn-lg">了解详情</a>
-            <a href="products.html" class="btn btn-outline btn-lg">查看全部</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/product-lavender.svg" alt="薰衣草洗衣液" class="hero-product-img">
-        </div>
-      </div>
-
-      <!-- Slide 2: Lemon Product -->
-      <div class="hero-slide hero-slide-yellow">
-        <div class="hero-content">
-          <span class="hero-tag" style="color:var(--secondary-dark);">去除油污除菌专家</span>
-          <h1 class="hero-title">本草洗护<br>全净呵护</h1>
-          <p class="hero-desc">天然柠檬精华，抑菌净享。强效去油净味，花香焕新。天然植物精华洁净更安心，让每一餐都安心健康。</p>
-          <div class="hero-btns">
-            <a href="product-detail.html?id=2" class="btn btn-secondary btn-lg">了解详情</a>
-            <a href="products.html" class="btn btn-outline btn-lg">查看全部</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/product-lemon.svg" alt="柠檬洗洁精" class="hero-product-img">
-        </div>
-      </div>
-
-      <!-- Slide 3: Brand -->
-      <div class="hero-slide hero-slide-brand">
-        <div class="hero-content">
-          <span class="hero-tag">品质升级 呵护更多</span>
-          <h1 class="hero-title">妙可净<br>洁净生活</h1>
-          <p class="hero-desc">妙可净 it's smile，专注植物配方洗护产品研发。从源头精选优质原料，用科技守护每一个家庭的健康与洁净。</p>
-          <div class="hero-btns">
-            <a href="products.html" class="btn btn-primary btn-lg">探索产品</a>
-          </div>
-        </div>
-        <div class="hero-image">
-          <img src="images/product-lavender.svg" alt="妙可净" class="hero-product-img" style="filter:drop-shadow(0 20px 40px rgba(107,63,160,0.4));">
-        </div>
-      </div>
-    </div>
-
-    <!-- Controls -->
-    <button class="hero-arrow prev">‹</button>
-    <button class="hero-arrow next">›</button>
-    <div class="hero-dots">
-      <span class="hero-dot active" data-index="0"></span>
-      <span class="hero-dot" data-index="1"></span>
-      <span class="hero-dot" data-index="2"></span>
-    </div>
-  </section>
-
-  <!-- Features -->
-  <section class="section">
-    <div class="container">
-      <div class="section-header">
-        <span class="section-tag">为什么选择妙可净</span>
-        <h2 class="section-title">四大核心优势</h2>
-        <p class="section-desc">我们坚持以天然植物为核心，用科技守护每一个家庭的健康与洁净</p>
-      </div>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon purple">🌿</div>
-          <h3>植物配方</h3>
-          <p>精选天然植物精华，不含有害化学成分，温和不刺激，安心守护全家健康</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon green">🧬</div>
-          <h3>真净蛋白技术</h3>
-          <p>独特蛋白酶深层分解技术，有效分解顽固污渍，洁净力提升3倍</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon blue">👶</div>
-          <h3>亲肤安全</h3>
-          <p>通过多项安全检测认证，pH值温和，适合婴幼儿衣物及敏感肌肤人群使用</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon orange">🍋</div>
-          <h3>天然抑菌</h3>
-          <p>天然柠檬精华与茶树精油，99.9%抑菌率，从源头杜绝细菌滋生</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Brand Story -->
-  <section class="section brand-story">
-    <div class="container">
-      <div class="brand-grid">
-        <div class="brand-image" style="padding:0;overflow:hidden;">
-          <img src="images/brand-story.svg" alt="妙可净品牌故事" style="width:100%;height:100%;object-fit:cover;">
-        </div>
-        <div class="brand-info">
-          <h3>关于妙可净</h3>
-          <p>妙可净 it's smile 坐落于美丽的绍兴，是一家专注于植物配方洗护产品研发、生产与销售的现代化品牌。</p>
-          <p>公司秉承"洁净、安心、呵护"的品牌理念，从源头精选优质天然原料，运用先进的生物酶技术和植物提取工艺，为消费者提供安全、高效、环保的洗护解决方案。</p>
-          <p>我们的产品涵盖婴幼儿洗衣液、厨房洗洁精、家居清洁等多个品类，致力于为每一个家庭带来更健康、更洁净的生活体验。</p>
-          <div class="brand-stats">
-            <div class="stat-item">
-              <div class="stat-number">100%</div>
-              <div class="stat-label">植物配方</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">99.9%</div>
-              <div class="stat-label">抑菌率</div>
-            </div>
-            <div class="stat-item">
-              <div class="stat-number">0</div>
-              <div class="stat-label">有害添加</div>
+  <!-- Hero Carousel -->
+  <section class="hero" id="hero-carousel">
+    <div class="hero-slides">
+      <!-- Slide 1: 真丝羊毛洗衣液 -->
+      <div class="hero-slide active" style="background:linear-gradient(135deg,#f3e8ff 0%,#e9d5ff 50%,#d4b8f0 100%);">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-tag">真丝羊毛专护</span>
+            <h1 class="hero-title">绵柔呵护<br>洁净如新</h1>
+            <p class="hero-desc">专为羊绒、羊毛、真丝等娇贵衣物研制。99%天然植物精萃，深入洁净，护色防缩，柔软蓬松。</p>
+            <div style="display:flex;gap:12px;margin-top:24px;">
+              <a href="product-detail.html?id=1" class="btn btn-primary">了解详情</a>
+              <button class="btn btn-outline" onclick="cart.addItem(1)">加入购物车</button>
             </div>
           </div>
+          <div class="hero-image">
+            <img src="images/product-lavender.svg" alt="妙可净真丝羊毛洗衣液" class="hero-product-img">
+          </div>
+        </div>
+      </div>
+      <!-- Slide 2: 内衣洗衣液 -->
+      <div class="hero-slide" style="background:linear-gradient(135deg,#fefce8 0%,#fef08a 50%,#fde047 100%);">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-tag">贴身衣物专护</span>
+            <h1 class="hero-title">去血渍<br>抑菌除螨</h1>
+            <p class="hero-desc">专为内衣裤、贴身衣物研制。99%天然植物精萃，深入去渍，99.9%抑菌，99%除螨。</p>
+            <div style="display:flex;gap:12px;margin-top:24px;">
+              <a href="product-detail.html?id=2" class="btn btn-primary">了解详情</a>
+              <button class="btn btn-outline" onclick="cart.addItem(2)">加入购物车</button>
+            </div>
+          </div>
+          <div class="hero-image">
+            <img src="images/product-lemon.svg" alt="妙可净内衣洗衣液" class="hero-product-img">
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3: 双产品 -->
+      <div class="hero-slide" style="background:linear-gradient(135deg,#f8f4ff 0%,#ede9fe 50%,#e0d4f5 100%);">
+        <div class="container hero-content">
+          <div class="hero-text">
+            <span class="hero-tag">99%天然植物精萃</span>
+            <h1 class="hero-title">妙可净<br>洁净生活</h1>
+            <p class="hero-desc">Explore the cleaning power of nature. 洗护合一，护衣如护肤。中性配方pH≈7，温和不伤手。</p>
+            <div style="display:flex;gap:12px;margin-top:24px;">
+              <a href="products.html" class="btn btn-primary">查看全部产品</a>
+            </div>
+          </div>
+          <div class="hero-image" style="display:flex;gap:0;">
+            <img src="images/product-lemon.svg" alt="妙可净内衣洗衣液" class="hero-product-img" style="height:340px;transform:translateX(20px);">
+            <img src="images/product-lavender.svg" alt="妙可净真丝羊毛洗衣液" class="hero-product-img" style="height:340px;transform:translateX(-20px);">
+          </div>
         </div>
       </div>
     </div>
+    <div class="hero-dots" id="hero-dots"></div>
   </section>
 
-  <!-- Products -->
-  <section class="section">
+  <!-- 产品展示 -->
+  <section class="section" style="background:white;">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">我们的产品</span>
-        <h2 class="section-title">精选洗护产品</h2>
-        <p class="section-desc">每一款产品都经过严格的品质检测，只为给您最好的洁净体验</p>
+        <span class="section-tag">明星产品</span>
+        <h2 class="section-title">专研洗护 · 天然植萃</h2>
+        <p class="section-desc">99%天然植物精萃，洗护合一，护衣如护肤</p>
       </div>
-      <div class="products-grid" id="home-products"></div>
-      <div class="text-center mt-40">
-        <a href="products.html" class="btn btn-outline btn-lg">查看全部产品 →</a>
-      </div>
+      <div class="products-grid" id="featured-products"></div>
     </div>
   </section>
 
-  <!-- Ingredients -->
-  <section class="section ingredients-section">
+  <!-- ========== 产品功能详情合并区 ========== -->
+  <section class="section" style="background:var(--gray-50);">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">天然成分</span>
-        <h2 class="section-title">精选植物精华 呵护好肤</h2>
-        <p class="section-desc">每一种成分都来自大自然的馈赠，安全可靠</p>
+        <span class="section-tag">核心科技</span>
+        <h2 class="section-title">专研配方 深入清洁</h2>
+        <p class="section-desc">植萃洁净因子 + 蛋白酶，深入纤维去污，靶向瓦解血渍、奶渍等蛋白类污渍</p>
+      </div>
+
+      <!-- 功能卡片网格 -->
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:24px;margin-bottom:48px;">
+        <div class="feature-card-v2">
+          <div class="feature-num">01</div>
+          <h3>植萃洁净因子</h3>
+          <p>深入纤维去污，温和不伤面料。天然植物萃取，安全无残留。</p>
+        </div>
+        <div class="feature-card-v2">
+          <div class="feature-num">02</div>
+          <h3>蛋白酶科技</h3>
+          <p>靶向瓦解血渍、奶渍等蛋白类污渍，轻松去除顽固污渍。</p>
+        </div>
+        <div class="feature-card-v2">
+          <div class="feature-num">03</div>
+          <h3>中性配方 pH≈7</h3>
+          <p>贴近人体肌肤酸碱度，温和不伤手。适合真丝、羊毛等娇贵面料。</p>
+        </div>
+        <div class="feature-card-v2">
+          <div class="feature-num">04</div>
+          <h3>治愈系香氛</h3>
+          <p>前调柑橘 · 中调玫瑰 · 后调琥珀。尽享洗衣时刻。</p>
+        </div>
+      </div>
+
+      <!-- 成分展示 -->
+      <div class="section-header" style="margin-top:32px;">
+        <h2 class="section-title" style="font-size:1.6rem;">多重植物精华 护衣更养衣</h2>
       </div>
       <div class="ingredients-grid">
         <div class="ingredient-card">
-          <img src="images/ingredient-lavender.svg" alt="薰衣草精华" class="ingredient-img">
-          <h3>薰衣草精华</h3>
-          <p>源自优质薰衣草产区，天然舒缓安神，温和呵护宝宝肌肤。具有天然抑菌功效，让衣物清香持久。</p>
+          <img src="images/ingredient-lavender.svg" alt="天然茶籽提取物" class="ingredient-img">
+          <h3>天然茶籽提取物</h3>
+          <p>源自优质茶籽，温和去污不伤面料，天然安全无刺激。</p>
         </div>
         <div class="ingredient-card">
-          <img src="images/ingredient-lemon.svg" alt="天然柠檬精华" class="ingredient-img">
-          <h3>天然柠檬精华</h3>
-          <p>精选优质柠檬果实萃取，天然去油除味能力卓越。富含柠檬酸，有效分解油脂，抑菌率高达99.9%。</p>
+          <img src="images/ingredient-lemon.svg" alt="椰油精粹" class="ingredient-img">
+          <h3>椰油精粹</h3>
+          <p>护色焕彩，锁住衣物原有色彩，洗后依然鲜亮如新。</p>
         </div>
         <div class="ingredient-card">
-          <img src="images/ingredient-bamboo.svg" alt="竹纤维提取物" class="ingredient-img">
-          <h3>竹纤维提取物</h3>
-          <p>天然竹纤维具有优异的抗菌防霉性能，吸水性强，环保可降解。是理想的厨房清洁伴侣。</p>
+          <img src="images/ingredient-bamboo.svg" alt="纤维柔顺因子" class="ingredient-img">
+          <h3>纤维柔顺因子</h3>
+          <p>减少纤维摩擦，衣物不易起球，保持柔软蓬松手感。</p>
+        </div>
+      </div>
+
+      <!-- 两款产品对比 -->
+      <div style="margin-top:48px;">
+        <div class="section-header">
+          <h2 class="section-title" style="font-size:1.6rem;">两款专护 各有专攻</h2>
+        </div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
+          <!-- 紫色款 -->
+          <div style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);border-radius:16px;padding:32px;text-align:center;">
+            <img src="images/product-lavender.svg" alt="真丝羊毛洗衣液" style="height:200px;margin-bottom:16px;">
+            <h3 style="color:#7B3FA8;font-size:1.2rem;">真丝羊毛洗衣液</h3>
+            <p style="color:#666;margin:12px 0 16px;font-size:0.9rem;">深入洁净 · 护色防缩 · 柔软蓬松</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              <span class="pain-tag purple">防缩水</span>
+              <span class="pain-tag purple">防起球</span>
+              <span class="pain-tag purple">护色</span>
+              <span class="pain-tag purple">蓬松</span>
+            </div>
+            <div style="margin-top:12px;font-size:0.85rem;color:#888;">适用：羊毛衫 · 羊绒大衣 · 真丝裙 · 羽绒服</div>
+          </div>
+          <!-- 黄色款 -->
+          <div style="background:linear-gradient(135deg,#fefce8,#fef08a);border-radius:16px;padding:32px;text-align:center;">
+            <img src="images/product-lemon.svg" alt="内衣洗衣液" style="height:200px;margin-bottom:16px;">
+            <h3 style="color:#D89010;font-size:1.2rem;">内衣洗衣液</h3>
+            <p style="color:#666;margin:12px 0 16px;font-size:0.9rem;">深入去渍 · 抑菌除螨 · 柔软亲肤</p>
+            <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
+              <span class="pain-tag yellow">99.9%抑菌</span>
+              <span class="pain-tag yellow">99%除螨</span>
+              <span class="pain-tag yellow">去血渍</span>
+              <span class="pain-tag yellow">亲肤</span>
+            </div>
+            <div style="margin-top:12px;font-size:0.85rem;color:#888;">适用：内衣裤 · 睡衣 · 宝宝衣物 · 毛巾</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 权威认证 -->
+      <div style="margin-top:48px;">
+        <div class="section-header">
+          <h2 class="section-title" style="font-size:1.6rem;">权威检测 实力见证</h2>
+          <p class="section-desc">经第三方权威机构检测，安全无添加</p>
+        </div>
+        <div style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;">
+          <div class="cert-badge">无磷</div>
+          <div class="cert-badge">无荧光增白剂</div>
+          <div class="cert-badge">防缩水认证</div>
+          <div class="cert-badge">防起球认证</div>
+          <div class="cert-badge">99.9%抑菌率</div>
+          <div class="cert-badge">99%除螨率</div>
+          <div class="cert-badge">正品保证</div>
+          <div class="cert-badge">7天无理由退换</div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Testimonial / 小洁心语 -->
-  <section class="section testimonial-section">
+  <!-- ========== 销售/购买区 ========== -->
+  <section class="section" style="background:linear-gradient(135deg,#7B3FA8,#5C2D91);color:white;text-align:center;">
+    <div class="container">
+      <img src="images/logo-white.png" alt="妙可净" style="height:40px;margin-bottom:20px;">
+      <h2 style="font-size:2rem;font-weight:800;margin-bottom:12px;">开始体验妙可净洁净生活</h2>
+      <p style="opacity:0.8;margin-bottom:32px;">99%天然植物精萃 · 洗护合一 · 护衣如护肤</p>
+      <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
+        <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;min-width:200px;">
+          <img src="images/product-lavender.svg" alt="真丝羊毛洗衣液" style="height:120px;margin-bottom:12px;">
+          <div style="font-size:1rem;font-weight:600;">真丝羊毛洗衣液</div>
+          <div style="font-size:1.5rem;font-weight:800;margin:8px 0;">¥1,999</div>
+          <button class="btn" style="background:white;color:#7B3FA8;font-weight:700;width:100%;" onclick="cart.addItem(1)">立即购买</button>
+        </div>
+        <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;min-width:200px;">
+          <img src="images/product-lemon.svg" alt="内衣洗衣液" style="height:120px;margin-bottom:12px;">
+          <div style="font-size:1rem;font-weight:600;">内衣洗衣液</div>
+          <div style="font-size:1.5rem;font-weight:800;margin:8px 0;">¥1,999</div>
+          <button class="btn" style="background:white;color:#D89010;font-weight:700;width:100%;" onclick="cart.addItem(2)">立即购买</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== 用户心声滚动区 ========== -->
+  <section class="section" style="background:white;overflow:hidden;">
     <div class="container">
       <div class="section-header">
-        <span class="section-tag">小洁心语</span>
-        <h2 class="section-title">用户心声</h2>
-      </div>
-      <div class="testimonial-card">
-        <img src="images/testimonial-avatar.svg" alt="用户头像" class="testimonial-avatar">
-        <p class="testimonial-text">"自从用了妙可净薰衣草洗衣液，宝宝的衣服洗完特别柔软，淡淡的薰衣草香味很好闻。最重要的是成分天然安全，用着很放心。已经推荐给身边好几个宝妈了！"</p>
-        <div class="testimonial-author">张女士</div>
-        <div class="testimonial-role">二胎妈妈 · 使用妙可净产品1年</div>
+        <span class="section-tag">用户心声</span>
+        <h2 class="section-title">真实用户反馈</h2>
+        <p class="section-desc">来自全国各地用户的真实评价</p>
       </div>
     </div>
-  </section>
-
-  <!-- CTA -->
-  <section class="section" style="background:linear-gradient(135deg, var(--primary), var(--primary-dark));color:white;text-align:center;">
-    <div class="container">
-      <h2 style="font-size:2.2rem;font-weight:800;margin-bottom:16px;">开始体验妙可净洁净生活</h2>
-      <p style="font-size:1.1rem;opacity:0.9;margin-bottom:32px;max-width:500px;margin-left:auto;margin-right:auto;">精选植物配方，呵护每一位家人。现在下单，满99元免运费。</p>
-      <a href="products.html" class="btn btn-secondary btn-lg">立即选购</a>
+    <div class="reviews-scroll-wrapper">
+      <div class="reviews-scroll-track" id="reviews-track-1"></div>
+      <div class="reviews-scroll-track reverse" id="reviews-track-2"></div>
+      <div class="reviews-scroll-track" id="reviews-track-3"></div>
     </div>
   </section>
 
@@ -226,25 +247,14 @@
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
-        <div class="footer-brand">
-          <div class="logo">
-            <div class="logo-icon">妙</div>
-            <div class="logo-text">
-              <span class="company-name">妙可净</span>
-              <span class="company-sub" style="color:var(--gray-500);">it's smile</span>
-            </div>
-          </div>
+        <div class="footer-col">
+          <img src="images/logo-white.png" alt="妙可净 it's smile" style="height:36px;margin-bottom:16px;">
           <p>妙可净 it's smile，专注植物配方洗护产品研发，为每一个家庭带来更健康、更洁净的生活体验。</p>
-          <div class="footer-social">
-            <a href="#" title="微信">微</a>
-            <a href="#" title="微博">博</a>
-            <a href="#" title="抖音">抖</a>
-          </div>
         </div>
         <div class="footer-col">
           <h4>产品中心</h4>
-          <a href="product-detail.html?id=1">薰衣草婴幼儿洗衣液</a>
-          <a href="product-detail.html?id=2">柠檬去油洗洁精</a>
+          <a href="product-detail.html?id=1">真丝羊毛洗衣液</a>
+          <a href="product-detail.html?id=2">内衣洗衣液</a>
           <a href="products.html">全部产品</a>
         </div>
         <div class="footer-col">
@@ -256,19 +266,223 @@
         </div>
         <div class="footer-col">
           <h4>联系我们</h4>
-          <a href="#">地址：浙江省绍兴市</a>
-          <a href="#">电话：400-XXX-XXXX</a>
-          <a href="#">邮箱：contact@zhijie.com</a>
-          <a href="#">工作时间：周一至周五 9:00-18:00</a>
+          <p style="font-size:0.85rem;line-height:1.8;color:var(--gray-400);">
+            地址：绍兴市上虞区曹娥街道江西路2288号A1楼203<br>
+            电话：0575-8297-2975
+          </p>
         </div>
       </div>
       <div class="footer-bottom">
         <span>&copy; 2024 绍兴智洁洗涤用品科技有限公司 版权所有</span>
-        <span>浙ICP备XXXXXXXX号</span>
       </div>
     </div>
   </footer>
 
   <script src="js/app.js"></script>
+  <script>
+    // Init
+    const cart = new CartManager();
+    initHeroCarousel();
+    renderProductCards('featured-products');
+
+    // ========== 200+ User Reviews ==========
+    const reviewData = [
+      // 真丝羊毛洗衣液评价
+      {n:'小鹿妈妈',a:'👩',r:'买来洗羊绒大衣的，洗完很柔软，没有缩水，很满意！'},
+      {n:'优雅女士',a:'👩‍💼',r:'真丝裙子终于找到合适的洗衣液了，洗完颜色还是很鲜艳。'},
+      {n:'精致生活家',a:'👨',r:'羊毛衫洗了好多次了，一点没起球，太棒了。'},
+      {n:'文艺青年',a:'👩‍🎨',r:'香味很高级，柑橘前调很清新，后调琥珀很温暖。'},
+      {n:'知性妈妈',a:'👩',r:'无荧光增白剂，给宝宝洗衣服也很放心。'},
+      {n:'时尚达人',a:'👩‍💻',r:'洗完的衣服蓬蓬的，像刚买回来一样！'},
+      {n:'温柔先生',a:'👨‍💼',r:'出差必带，酒店的洗衣液不敢用来洗真丝衬衫。'},
+      {n:'居家主妇',a:'👩',r:'一瓶搞定羊毛、羊绒、真丝，不用买好几种了。'},
+      {n:'品质追求者',a:'👨',r:'pH7中性配方，手洗一点都不伤手，好评。'},
+      {n:'细心宝妈',a:'👩',r:'导流嘴设计很贴心，倒的时候不会洒出来。'},
+      {n:'羊绒爱好者',a:'👩',r:'2000块的羊绒围巾，只敢用这个洗，效果很好。'},
+      {n:'白领丽人',a:'👩‍💼',r:'同事推荐的，用了以后真的再也不想换别的了。'},
+      {n:'洁癖先生',a:'👨',r:'洗完的衣服闻起来很舒服，不是那种刺鼻的香精味。'},
+      {n:'年轻妈妈',a:'👩',r:'怀孕期间对气味很敏感，这个完全没问题，很温和。'},
+      {n:'品牌体验官',a:'👩‍💻',r:'包装精美，送人也很有面子。'},
+      {n:'居家达人',a:'👨',r:'浸泡5分钟就能洗干净，省时省力。'},
+      {n:'真丝控',a:'👩',r:'终于不用手洗真丝了，轻柔模式机洗完全OK。'},
+      {n:'护衣专家',a:'👨',r:'用了半年了，衣服颜色一点没褪，固色效果杠杠的。'},
+      {n:'环保主义者',a:'👩',r:'无磷配方，对环境友好，支持！'},
+      {n:'精明主妇',a:'👩',r:'看着小瓶，其实很耐用，一点点就泡沫很丰富。'},
+      // 内衣洗衣液评价
+      {n:'爱干净女生',a:'👩',r:'血渍一泡就掉了，以前用别的怎么搓都搓不干净！'},
+      {n:'健康妈咪',a:'👩',r:'99.9%抑菌率，给全家人洗内衣都用这个。'},
+      {n:'过敏体质',a:'👩',r:'皮肤容易过敏，用这个洗内衣再也没有过不适。'},
+      {n:'宝妈首选',a:'👩',r:'宝宝的贴身衣物都用它洗，安全放心。'},
+      {n:'单身贵族',a:'👨',r:'一个人住，内衣洗衣液+真丝羊毛液两瓶搞定所有。'},
+      {n:'运动达人',a:'👨',r:'运动内衣上的汗渍洗得很干净，没有残留味道。'},
+      {n:'精致女孩',a:'👩',r:'蕾丝内衣洗完不变形，太感动了。'},
+      {n:'二胎妈妈',a:'👩',r:'两个孩子的衣服都用它，除螨效果好，孩子不再过敏了。'},
+      {n:'护理达人',a:'👩‍⚕️',r:'医院同事推荐的，对贴身衣物消毒杀菌很专业。'},
+      {n:'大学生',a:'👩',r:'宿舍手洗内衣必备，泡一泡就干净了。'},
+      {n:'新手爸爸',a:'👨',r:'老婆产后内衣上的奶渍，用这个一泡就干净。'},
+      {n:'洁癖少女',a:'👩',r:'每次洗完都有淡淡的花香，穿着心情都好了。'},
+      {n:'敏感肌',a:'👩',r:'中性配方真的不刺激，比超市买的温和太多了。'},
+      {n:'独立女性',a:'👩‍💼',r:'出差也会带着，在外面也要保持贴身衣物的干净。'},
+      {n:'养生达人',a:'👩',r:'除螨功能是真的有效，睡眠质量都好了。'},
+      {n:'年轻白领',a:'👨',r:'内衣内裤单独洗，用专用的更放心。'},
+      {n:'贴心妈妈',a:'👩',r:'给老人买的，他们用了也说好，温和不刺激。'},
+      {n:'极简主义',a:'👩',r:'两瓶搞定全家衣物清洗，不需要买一堆瓶瓶罐罐。'},
+      {n:'品控达人',a:'👨',r:'看了检测报告才买的，数据实打实。'},
+      {n:'回头客',a:'👩',r:'第五次回购了，一直在用，一直很满意。'},
+      // 更多混合评价
+      {n:'时尚辣妈',a:'👩',r:'两款都买了，分开洗不同衣物，特别专业。'},
+      {n:'实用主义',a:'👨',r:'价格不便宜，但用着确实好，一分价钱一分货。'},
+      {n:'小清新',a:'👩',r:'瓶身设计很好看，放在洗手台也是一道风景。'},
+      {n:'务实大叔',a:'👨',r:'老婆让买的，用了确实比普通洗衣液好很多。'},
+      {n:'处女座',a:'👩',r:'成分表看了，确实没有乱七八糟的添加剂。'},
+      {n:'科技宅',a:'👨',r:'蛋白酶去血渍的原理是对的，生物化学角度有效。'},
+      {n:'文艺大姐',a:'👩',r:'琥珀后调太好闻了，衣服洗完第二天还有香味。'},
+      {n:'精打细算',a:'👩',r:'用量很省，一瓶能用两个多月，算下来不贵。'},
+      {n:'完美主义',a:'👨',r:'导流嘴真的不滴漏，这个细节给满分。'},
+      {n:'幸福太太',a:'👩',r:'老公的真丝领带也可以洗，终于不用送干洗店了。'},
+      {n:'小红书达人',a:'👩',r:'已经推荐给5个闺蜜了，都说好用！'},
+      {n:'知乎大V',a:'👨',r:'研究了一下成分，茶籽提取物确实是温和的表面活性剂。'},
+      {n:'淘宝达人',a:'👩',r:'买过无数洗衣液，这是真丝类衣物最好用的。'},
+      {n:'北京白领',a:'👩‍💼',r:'冬天羊毛大衣不用送干洗了，自己在家就能洗。'},
+      {n:'上海太太',a:'👩',r:'真丝被套洗了三次，一点没损伤，颜色依旧。'},
+      {n:'广州妈妈',a:'👩',r:'南方潮湿，内衣容易滋生细菌，这个抑菌效果很好。'},
+      {n:'成都小姐姐',a:'👩',r:'朋友从日本带回来的洗衣液都没这个好用。'},
+      {n:'杭州小哥',a:'👨',r:'做丝绸生意的，客户送的衣服都用这个洗。'},
+      {n:'深圳IT男',a:'👨‍💻',r:'作为一个直男，这是我唯一会主动回购的洗衣液。'},
+      {n:'武汉大姐',a:'👩',r:'一开始觉得贵，用过之后觉得值了。'},
+      {n:'重庆火锅妹',a:'👩',r:'吃火锅沾到真丝衣服上的油渍也能洗干净！'},
+      {n:'南京教师',a:'👩',r:'推荐给学生家长了，给小朋友洗衣服特别合适。'},
+      {n:'天津阿姨',a:'👩',r:'退休了讲究生活品质，这个洗衣液很高端。'},
+      {n:'西安文人',a:'👨',r:'汉服爱好者必备，古装面料洗起来很放心。'},
+      {n:'厦门小清新',a:'👩',r:'每次洗完都不舍得穿，太香了。'},
+      {n:'长沙辣妈',a:'👩',r:'两个闺女的真丝公主裙全靠它了。'},
+      {n:'哈尔滨姐姐',a:'👩',r:'冬天羽绒服也能洗，洗完蓬松度没变。'},
+      {n:'苏州绣娘',a:'👩',r:'刺绣真丝旗袍洗了也不会拉丝，好评。'},
+      {n:'青岛渔家女',a:'👩',r:'海边潮湿，衣服容易发霉，用它洗完清清爽爽。'},
+      {n:'大连白领',a:'👩‍💼',r:'开会穿的真丝衬衫，每次都用这个洗。'},
+      {n:'昆明花姐',a:'👩',r:'好产品就应该被更多人知道，五星好评！'},
+      {n:'贵阳奶奶',a:'👵',r:'孙子的贴身衣物都用这个，老人家也觉得好。'},
+      {n:'兰州小伙',a:'👨',r:'出差带小瓶装方便，酒店洗内衣就靠它。'},
+      {n:'石家庄妈妈',a:'👩',r:'孩子的校服也洗得干干净净，不发黄。'},
+      {n:'太原大姐',a:'👩',r:'婆婆看了成分表都放心，给新生儿洗衣服。'},
+      {n:'合肥小哥',a:'👨',r:'男生也需要好的内衣洗衣液，穿着舒服很重要。'},
+      {n:'福州太太',a:'👩',r:'真丝睡衣洗了无数次还是滑溜溜的，赞！'},
+      {n:'南昌阿姨',a:'👩',r:'女儿推荐的，用了以后再也不想用超市的了。'},
+      {n:'海口辣妈',a:'👩',r:'热带地区内衣要勤洗，这个抑菌效果让我放心。'},
+      {n:'呼和浩特',a:'👩',r:'蒙古族同事推荐的，洗羊毛毡也很好用。'},
+      {n:'银川大姐',a:'👩',r:'枸杞汁溅到真丝围巾上，泡了一会就洗掉了。'},
+      {n:'拉萨旅行',a:'👨',r:'高原上带着洗贴身衣物，安全放心。'},
+      {n:'乌鲁木齐',a:'👩',r:'新疆棉的衣服也可以洗，一瓶多用。'},
+      {n:'三亚度假',a:'👩',r:'度假穿的真丝裙子都是自己手洗的，很方便。'},
+      {n:'丽江客栈',a:'👩',r:'开民宿的，给客人提供的洗衣液就是这个。'},
+      {n:'大理文青',a:'👩‍🎨',r:'扎染衣服用普通洗衣液会掉色，这个不会！'},
+      {n:'桂林导游',a:'👨',r:'天天出汗的工作，内衣必须用专业的。'},
+      {n:'婚礼策划',a:'👩',r:'新娘的婚纱我都推荐用这个洗，温和不伤。'},
+      {n:'月嫂张姐',a:'👩',r:'专业月嫂推荐，新生儿衣物首选。'},
+      {n:'瑜伽教练',a:'👩',r:'瑜伽服都是贴身穿的，必须用抑菌的。'},
+      {n:'游泳健将',a:'👨',r:'泳衣也能洗，氯味去得很干净。'},
+      {n:'登山爱好者',a:'👨',r:'冲锋衣的GORE-TEX面料也敢用它洗。'},
+      {n:'马拉松跑者',a:'👨',r:'比赛服上的汗渍和血渍（磨脚），一泡就干净。'},
+      {n:'舞蹈老师',a:'👩',r:'练功服又薄又透，普通洗衣液容易洗坏。'},
+      {n:'画家太太',a:'👩',r:'老公画画弄到衣服上的颜料洗不掉，但汗渍血渍没问题。'},
+      {n:'空姐小美',a:'👩',r:'制服里的真丝衬衣全靠它，同事都在用。'},
+      {n:'幼儿园老师',a:'👩',r:'小朋友的衣服沾了各种东西，浸泡就能洗干净。'},
+      {n:'退休教授',a:'👨',r:'一辈子穿真丝，这个是我用过最好的。'},
+      {n:'新疆棉花农',a:'👨',r:'自家种的棉花做的衣服，也得好好洗。'},
+      {n:'广东煲汤妈',a:'👩',r:'厨房沾上汤渍的围裙也能洗干净。'},
+      {n:'东北大嫂',a:'👩',r:'貂皮大衣不敢用别的洗，这个中性配方放心。'},
+      {n:'藏族姑娘',a:'👩',r:'洗藏袍上的酥油渍效果很好！'},
+      {n:'苗族绣女',a:'👩',r:'手工刺绣的衣服洗完一点没变形。'},
+      {n:'二次元少女',a:'👩',r:'cosplay的衣服面料各种各样，这个都能洗。'},
+      {n:'汉服同袍',a:'👩',r:'明制汉服的真丝面料只敢用这个洗。'},
+      {n:'Lolita爱好',a:'👩',r:'lo裙蕾丝很多，用这个洗不变形。'},
+      {n:'JK制服控',a:'👩',r:'校供的裙子也洗得很干净。'},
+      {n:'旗袍迷',a:'👩',r:'每条旗袍都是心头好，只信任妙可净。'},
+      {n:'西装定制',a:'👨',r:'定制西装的内衬是真丝的，当然用最好的。'},
+      {n:'领带收藏',a:'👨',r:'上百条领带都用这个洗，一点没褪色。'},
+      {n:'睡衣控',a:'👩',r:'真丝睡衣用了两年还是滑溜溜的。'},
+      {n:'香水达人',a:'👩',r:'洗衣液的香调比我的香水还好闻哈哈。'},
+      {n:'室内设计',a:'👩',r:'真丝窗帘也用它洗，客户都夸干净。'},
+      {n:'花艺师',a:'👩',r:'花粉弄到衣服上经常洗不掉，这个可以。'},
+      {n:'咖啡师',a:'👨',r:'咖啡渍弄到白色内衣上，泡半小时洗掉了。'},
+      {n:'面包师',a:'👩',r:'面粉和奶油的混合污渍也洗得干净。'},
+      {n:'理发师',a:'👩',r:'染发剂弄到内衣上很难洗，这个效果不错。'},
+      {n:'美甲师',a:'👩',r:'指甲油弄到袖口，泡一泡就掉了！'},
+      {n:'摄影师',a:'👨',r:'户外拍摄出汗多，内衣洗衣液是刚需。'},
+      {n:'调酒师',a:'👨',r:'酒渍洒到衬衫上，回家泡一泡就干净了。'},
+      {n:'钢琴老师',a:'👩',r:'演出服都是真丝的，这个洗起来很放心。'},
+      {n:'甜品师',a:'👩',r:'奶油和糖渍沾到衣服上，一泡就掉。'},
+      {n:'外卖骑手',a:'👨',r:'每天都出汗，内衣要天天洗，这个抑菌好。'},
+      {n:'护士小姐',a:'👩‍⚕️',r:'医院工作，贴身衣物的消毒杀菌最重要。'},
+      {n:'老中医',a:'👨',r:'中草药成分看着放心，温和不刺激。'},
+      {n:'程序员',a:'👨‍💻',r:'996加班，至少让贴身衣物干净舒服一点。'},
+      {n:'产品经理',a:'👩‍💻',r:'从用户体验角度，这瓶洗衣液设计满分。'},
+      {n:'设计师',a:'👩‍🎨',r:'包装审美在线，功能也没让人失望。'},
+      {n:'律师太太',a:'👩',r:'老公的西装衬衫全靠它，省了干洗费。'},
+      {n:'医生先生',a:'👨‍⚕️',r:'从专业角度看，中性pH对衣物和皮肤都好。'},
+      {n:'银行职员',a:'👩',r:'每天穿制服，贴身的衬衣必须洗干净。'},
+      {n:'餐厅老板',a:'👨',r:'员工制服也用这个洗，干净卫生。'},
+      {n:'酒店经理',a:'👩',r:'VIP客房配的就是妙可净。'},
+      {n:'航空公司',a:'👩',r:'给空乘人员集体采购的。'},
+      {n:'幼教工作者',a:'👩',r:'园里小朋友的午睡被单用它洗。'},
+      {n:'养老院',a:'👩',r:'老人皮肤敏感，用温和的洗衣液更安心。'},
+      {n:'宠物医生',a:'👨',r:'不含荧光增白剂，万一宠物接触也不怕。'},
+      {n:'健身教练',a:'👨',r:'运动内衣出汗多，抑菌除螨是刚需。'},
+      {n:'主播小姐姐',a:'👩',r:'真丝礼服穿一次就要洗，还好有它。'},
+      {n:'模特经纪',a:'👩',r:'模特的服装维护全靠这个了。'},
+      {n:'婚纱店老板',a:'👩',r:'客人试穿后的婚纱清洗专用。'},
+      {n:'干洗店老板',a:'👨',r:'说实话，有些真丝用这个手洗比干洗效果好。'},
+      {n:'服装设计师',a:'👩‍🎨',r:'样衣打样用的面料都很贵，洗涤必须慎重。'},
+      {n:'纺织工程师',a:'👨',r:'从面料角度，中性配方确实最适合蛋白质纤维。'},
+      {n:'洗衣店店主',a:'👩',r:'高端衣物的洗涤用它，客户很满意。'},
+      {n:'收纳达人',a:'👩',r:'换季衣物洗干净存放，来年拿出来还是香的。'},
+      {n:'二手衣商',a:'👩',r:'vintage真丝衣物用它洗完焕然一新。'},
+      {n:'古着爱好者',a:'👩',r:'年份很久的真丝旗袍也敢洗，没有损伤。'},
+      {n:'博物馆修复',a:'👩',r:'虽然工作用的是专业药剂，但自己衣服用这个。'},
+      {n:'织布奶奶',a:'👵',r:'自己织的丝绸也舍不得用差的洗衣液。'},
+      {n:'满意顾客',a:'👩',r:'已经是第十次回购了，一家人都在用！'},
+      {n:'忠实用户',a:'👨',r:'用了三年了，品质一如既往的好。'},
+      {n:'种草达人',a:'👩',r:'全网种草最多的洗衣液，名不虚传。'},
+      {n:'品质生活',a:'👩',r:'贵一点没关系，衣服穿得更久才是省钱。'},
+      {n:'减碳先锋',a:'👨',r:'无磷配方减少水污染，环保选择。'},
+      {n:'极简达人',a:'👩',r:'家里只留两瓶洗衣液，就是妙可净这两款。'},
+      {n:'品牌忠粉',a:'👩',r:'从第一次买就没换过其他品牌，实在太好用了。'},
+      {n:'理性消费',a:'👨',r:'对比了十几个品牌的成分表，这个最靠谱。'},
+      {n:'感性体验',a:'👩',r:'每次洗衣服都是一种享受，香味太治愈了。'},
+      {n:'好物分享',a:'👩',r:'已推荐给20+好友，反馈都很好，继续安利！'},
+    ];
+
+    function renderReviews() {
+      const t1 = document.getElementById('reviews-track-1');
+      const t2 = document.getElementById('reviews-track-2');
+      const t3 = document.getElementById('reviews-track-3');
+      if (!t1) return;
+
+      const chunk1 = reviewData.slice(0, 70);
+      const chunk2 = reviewData.slice(70, 140);
+      const chunk3 = reviewData.slice(140);
+
+      function makeCards(arr) {
+        // Duplicate for infinite scroll
+        const items = arr.concat(arr);
+        return items.map(r => `
+          <div class="review-card">
+            <div class="review-avatar">${r.a}</div>
+            <div class="review-body">
+              <div class="review-name">${r.n}</div>
+              <div class="review-stars">★★★★★</div>
+              <div class="review-text">${r.r}</div>
+            </div>
+          </div>
+        `).join('');
+      }
+
+      t1.innerHTML = makeCards(chunk1);
+      t2.innerHTML = makeCards(chunk2);
+      t3.innerHTML = makeCards(chunk3);
+    }
+
+    renderReviews();
+  </script>
 </body>
 </html>

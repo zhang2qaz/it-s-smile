@@ -133,28 +133,7 @@ input:focus, select:focus, textarea:focus {
   color: var(--primary);
 }
 
-.logo-full {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-}
-
-.logo-cn {
-  font-size: 1.5rem;
-  font-weight: 800;
-  letter-spacing: 2px;
-}
-
-.logo-en {
-  font-size: 0.85rem;
-  font-weight: 600;
-  font-style: italic;
-  letter-spacing: 0.5px;
-}
+/* Logo image handled by .logo-img class */
 
 .nav-links {
   display: flex;
@@ -2034,6 +2013,147 @@ img.testimonial-avatar {
   border-radius: 50%;
   margin: 0 auto 20px;
   display: block;
+}
+
+/* --- Logo Image --- */
+.logo-img {
+  height: 38px;
+  width: auto;
+}
+
+/* --- Feature Cards V2 --- */
+.feature-card-v2 {
+  background: white;
+  border-radius: 16px;
+  padding: 28px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feature-card-v2:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+.feature-num {
+  font-size: 2rem;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 12px;
+}
+.feature-card-v2 h3 {
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+.feature-card-v2 p {
+  color: var(--gray-500);
+  font-size: 0.9rem;
+  line-height: 1.6;
+}
+
+/* --- Pain Point Tags --- */
+.pain-tag {
+  display: inline-block;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.pain-tag.purple {
+  background: rgba(123,63,168,0.12);
+  color: #7B3FA8;
+}
+.pain-tag.yellow {
+  background: rgba(216,144,16,0.12);
+  color: #D89010;
+}
+
+/* --- Certification Badges --- */
+.cert-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 30px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--gray-700);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+.cert-badge::before {
+  content: '✓';
+  width: 20px;
+  height: 20px;
+  background: linear-gradient(135deg, #22c55e, #16a34a);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+  font-weight: 700;
+}
+
+/* --- Reviews Scroll --- */
+.reviews-scroll-wrapper {
+  overflow: hidden;
+  padding: 0 0 20px;
+}
+.reviews-scroll-track {
+  display: flex;
+  gap: 16px;
+  animation: scrollReviews 60s linear infinite;
+  margin-bottom: 16px;
+  width: max-content;
+}
+.reviews-scroll-track.reverse {
+  animation: scrollReviewsReverse 55s linear infinite;
+}
+@keyframes scrollReviews {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes scrollReviewsReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+.review-card {
+  flex-shrink: 0;
+  width: 280px;
+  background: var(--gray-50);
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.review-avatar {
+  font-size: 1.8rem;
+  flex-shrink: 0;
+}
+.review-body {
+  flex: 1;
+  min-width: 0;
+}
+.review-name {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--gray-800);
+  margin-bottom: 2px;
+}
+.review-stars {
+  font-size: 0.7rem;
+  color: #f59e0b;
+  margin-bottom: 6px;
+  letter-spacing: 2px;
+}
+.review-text {
+  font-size: 0.8rem;
+  color: var(--gray-600);
+  line-height: 1.5;
 }
 
 /* --- Utilities --- */

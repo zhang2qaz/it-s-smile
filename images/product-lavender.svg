@@ -1,100 +1,129 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="400" height="700">
   <defs>
-    <linearGradient id="bagBody" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#D4A8F0"/>
-      <stop offset="30%" stop-color="#B87FDB"/>
-      <stop offset="60%" stop-color="#9B5FC4"/>
+    <linearGradient id="pBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#C490E8"/>
+      <stop offset="40%" stop-color="#9B5CC4"/>
       <stop offset="100%" stop-color="#7B3FA8"/>
     </linearGradient>
-    <linearGradient id="bagShine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
-      <stop offset="50%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.15)"/>
+    <linearGradient id="pShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.35)"/>
+      <stop offset="30%" stop-color="rgba(255,255,255,0.08)"/>
+      <stop offset="70%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.12)"/>
     </linearGradient>
-    <linearGradient id="capGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#8B5CC0"/>
-      <stop offset="100%" stop-color="#6B3FA0"/>
+    <linearGradient id="pCap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#E8E4EC"/>
+      <stop offset="50%" stop-color="#D0C8D8"/>
+      <stop offset="100%" stop-color="#C0B8C8"/>
     </linearGradient>
-    <linearGradient id="liquidGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#C9A0E8"/>
-      <stop offset="100%" stop-color="#A070D0"/>
+    <linearGradient id="pLiquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(200,160,240,0.5)"/>
+      <stop offset="100%" stop-color="rgba(160,100,210,0.3)"/>
     </linearGradient>
-    <filter id="shadow1">
-      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="rgba(107,63,160,0.3)"/>
+    <filter id="pShadow">
+      <feDropShadow dx="5" dy="10" stdDeviation="15" flood-color="rgba(100,50,160,0.35)"/>
     </filter>
-    <clipPath id="bagClip">
-      <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z"/>
-    </clipPath>
+    <filter id="pGlow">
+      <feGaussianBlur stdDeviation="2" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
   </defs>
 
-  <!-- Shadow -->
-  <ellipse cx="200" cy="575" rx="100" ry="12" fill="rgba(107,63,160,0.15)"/>
+  <!-- Bottle shadow on ground -->
+  <ellipse cx="200" cy="680" rx="80" ry="10" fill="rgba(100,50,160,0.12)"/>
 
-  <!-- Bag body -->
-  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#bagBody)" filter="url(#shadow1)"/>
+  <!-- Bottle body - hourglass/curved shape matching real photo -->
+  <path d="
+    M145,120
+    Q140,120 138,130 L132,180
+    Q125,220 122,260
+    Q118,310 120,340
+    Q122,370 128,390
+    L135,420
+    Q128,450 125,480
+    Q120,530 120,570
+    Q120,610 128,640
+    Q135,660 150,668
+    L250,668
+    Q265,660 272,640
+    Q280,610 280,570
+    Q280,530 275,480
+    Q272,450 265,420
+    L272,390
+    Q278,370 280,340
+    Q282,310 278,260
+    Q275,220 268,180
+    L262,130
+    Q260,120 255,120
+    Z
+  " fill="url(#pBody)" filter="url(#pShadow)"/>
 
-  <!-- Bag shine overlay -->
-  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#bagShine)"/>
+  <!-- Shine overlay -->
+  <path d="
+    M145,120
+    Q140,120 138,130 L132,180
+    Q125,220 122,260
+    Q118,310 120,340
+    Q122,370 128,390
+    L135,420
+    Q128,450 125,480
+    Q120,530 120,570
+    Q120,610 128,640
+    Q135,660 150,668
+    L250,668
+    Q265,660 272,640
+    Q280,610 280,570
+    Q280,530 275,480
+    Q272,450 265,420
+    L272,390
+    Q278,370 280,340
+    Q282,310 278,260
+    Q275,220 268,180
+    L262,130
+    Q260,120 255,120
+    Z
+  " fill="url(#pShine)"/>
 
-  <!-- Left fold line -->
-  <path d="M140,100 Q135,300 138,520" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+  <!-- Transparency/liquid effect -->
+  <ellipse cx="200" cy="560" rx="60" ry="80" fill="url(#pLiquid)"/>
 
-  <!-- Right fold line -->
-  <path d="M260,100 Q265,300 262,520" stroke="rgba(0,0,0,0.08)" stroke-width="1" fill="none"/>
+  <!-- Cap -->
+  <rect x="162" y="82" width="76" height="42" rx="6" fill="url(#pCap)"/>
+  <rect x="170" y="70" width="60" height="18" rx="10" fill="#D8D0E0"/>
+  <ellipse cx="200" cy="70" rx="25" ry="6" fill="#E0D8E8"/>
+  <rect x="165" y="118" width="70" height="6" rx="3" fill="rgba(0,0,0,0.08)"/>
 
-  <!-- Cap/spout area -->
-  <rect x="175" y="30" width="50" height="25" rx="6" fill="url(#capGrad)"/>
-  <rect x="185" y="20" width="30" height="15" rx="8" fill="#7B4FB0"/>
-  <ellipse cx="200" cy="20" rx="12" ry="4" fill="#9B6FCF"/>
+  <!-- Brand label area -->
+  <rect x="138" y="210" width="124" height="200" rx="8" fill="rgba(255,255,255,0.12)"/>
 
-  <!-- Tear notch -->
-  <path d="M275,85 L285,85" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <!-- Logo text: it's smile -->
+  <text x="200" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" font-style="italic">it's</text>
+  <text x="200" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="white" letter-spacing="2">smile</text>
+  <!-- Smile curve -->
+  <path d="M175,285 Q200,300 225,285" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <!-- 妙可净 -->
+  <text x="175" y="260" text-anchor="end" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.9)">妙可净</text>
 
-  <!-- Window showing liquid -->
-  <ellipse cx="200" cy="420" rx="55" ry="70" fill="url(#liquidGrad)" opacity="0.4"/>
-  <ellipse cx="200" cy="420" rx="55" ry="70" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <!-- Tagline -->
+  <text x="200" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">Explore the cleaning</text>
+  <text x="200" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">power of nature</text>
 
-  <!-- Lavender sprigs illustration -->
-  <g transform="translate(200,200)" opacity="0.9">
-    <!-- Stem 1 -->
-    <line x1="-20" y1="40" x2="-15" y2="-30" stroke="#E8D0F8" stroke-width="2"/>
-    <circle cx="-15" cy="-30" r="4" fill="#D4A0F0"/>
-    <circle cx="-17" cy="-22" r="3.5" fill="#D4A0F0"/>
-    <circle cx="-16" cy="-14" r="3" fill="#C890E8"/>
-    <circle cx="-18" cy="-6" r="3" fill="#C890E8"/>
-    <!-- Stem 2 -->
-    <line x1="0" y1="40" x2="2" y2="-40" stroke="#E8D0F8" stroke-width="2"/>
-    <circle cx="2" cy="-40" r="4.5" fill="#D4A0F0"/>
-    <circle cx="1" cy="-32" r="4" fill="#D4A0F0"/>
-    <circle cx="2" cy="-24" r="3.5" fill="#C890E8"/>
-    <circle cx="1" cy="-16" r="3" fill="#C890E8"/>
-    <circle cx="2" cy="-8" r="3" fill="#BC80E0"/>
-    <!-- Stem 3 -->
-    <line x1="20" y1="40" x2="18" y2="-25" stroke="#E8D0F8" stroke-width="2"/>
-    <circle cx="18" cy="-25" r="4" fill="#D4A0F0"/>
-    <circle cx="19" cy="-17" r="3.5" fill="#C890E8"/>
-    <circle cx="18" cy="-9" r="3" fill="#C890E8"/>
-    <!-- Leaves -->
-    <ellipse cx="-12" cy="20" rx="8" ry="3" fill="#90C890" transform="rotate(-30,-12,20)"/>
-    <ellipse cx="14" cy="25" rx="8" ry="3" fill="#90C890" transform="rotate(25,14,25)"/>
-    <ellipse cx="-5" cy="30" rx="7" ry="2.5" fill="#80B880" transform="rotate(-15,-5,30)"/>
-  </g>
+  <!-- Perilla leaf icon -->
+  <circle cx="200" cy="370" r="22" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5"/>
+  <path d="M200,355 Q190,365 192,378 Q195,385 200,388 Q205,385 208,378 Q210,365 200,355Z" fill="white"/>
+  <line x1="200" y1="358" x2="200" y2="385" stroke="rgba(155,92,196,0.5)" stroke-width="0.8"/>
 
-  <!-- Brand name -->
-  <text x="200" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="white" letter-spacing="4">妙可净</text>
-  <text x="200" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.85)" font-style="italic" letter-spacing="1">it's smile</text>
+  <text x="200" y="405" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.8)">Perilla</text>
 
-  <!-- Product name -->
-  <text x="200" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="2">薰衣草婴幼儿洗衣液</text>
+  <!-- Product info -->
+  <text x="200" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">99%天然植物精萃*</text>
 
-  <!-- Feature badge -->
-  <rect x="155" y="390" width="90" height="22" rx="11" fill="rgba(255,255,255,0.25)"/>
-  <text x="200" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="600">植物配方 温和亲肤</text>
+  <text x="200" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">SILK &amp; WOOL WASH</text>
+  <text x="200" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2">妙可净真丝羊毛洗衣液</text>
 
   <!-- Volume -->
-  <text x="200" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white">500ml</text>
+  <text x="200" y="620" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="white">255 mL (8.6 fl oz)</text>
 
-  <!-- Bottom decorative line -->
-  <line x1="155" y1="525" x2="245" y2="525" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-  <text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">轻松呵护 亲肤好衣</text>
+  <!-- Bottom highlight -->
+  <ellipse cx="200" cy="665" rx="60" ry="3" fill="rgba(255,255,255,0.15)"/>
 </svg>

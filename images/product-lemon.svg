@@ -1,88 +1,117 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 700" width="400" height="700">
   <defs>
-    <linearGradient id="lBagBody" x1="0" y1="0" x2="1" y2="1">
-      <stop offset="0%" stop-color="#FFD86B"/>
-      <stop offset="30%" stop-color="#F5C030"/>
-      <stop offset="60%" stop-color="#E8A810"/>
-      <stop offset="100%" stop-color="#D09000"/>
+    <linearGradient id="yBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#FFD040"/>
+      <stop offset="40%" stop-color="#F0A820"/>
+      <stop offset="100%" stop-color="#D89010"/>
     </linearGradient>
-    <linearGradient id="lBagShine" x1="0" y1="0" x2="1" y2="0">
-      <stop offset="0%" stop-color="rgba(255,255,255,0.35)"/>
-      <stop offset="50%" stop-color="rgba(255,255,255,0.05)"/>
-      <stop offset="100%" stop-color="rgba(255,255,255,0.2)"/>
+    <linearGradient id="yShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.4)"/>
+      <stop offset="30%" stop-color="rgba(255,255,255,0.1)"/>
+      <stop offset="70%" stop-color="rgba(255,255,255,0)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.15)"/>
     </linearGradient>
-    <linearGradient id="lCapGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#E8A810"/>
-      <stop offset="100%" stop-color="#C08800"/>
+    <linearGradient id="yCap" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#F0ECE0"/>
+      <stop offset="50%" stop-color="#D8D0C0"/>
+      <stop offset="100%" stop-color="#C8C0B0"/>
     </linearGradient>
-    <linearGradient id="lLiquidGrad" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#FFE88B"/>
-      <stop offset="100%" stop-color="#F0C040"/>
+    <linearGradient id="yLiquid" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="rgba(255,220,80,0.5)"/>
+      <stop offset="100%" stop-color="rgba(240,168,32,0.3)"/>
     </linearGradient>
-    <filter id="lShadow">
-      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="rgba(200,140,0,0.3)"/>
+    <filter id="yShadow">
+      <feDropShadow dx="5" dy="10" stdDeviation="15" flood-color="rgba(180,120,0,0.3)"/>
     </filter>
   </defs>
 
-  <ellipse cx="200" cy="575" rx="100" ry="12" fill="rgba(200,140,0,0.15)"/>
+  <ellipse cx="200" cy="680" rx="80" ry="10" fill="rgba(180,120,0,0.12)"/>
 
-  <!-- Bag body -->
-  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#lBagBody)" filter="url(#lShadow)"/>
-  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#lBagShine)"/>
+  <!-- Bottle body -->
+  <path d="
+    M145,120
+    Q140,120 138,130 L132,180
+    Q125,220 122,260
+    Q118,310 120,340
+    Q122,370 128,390
+    L135,420
+    Q128,450 125,480
+    Q120,530 120,570
+    Q120,610 128,640
+    Q135,660 150,668
+    L250,668
+    Q265,660 272,640
+    Q280,610 280,570
+    Q280,530 275,480
+    Q272,450 265,420
+    L272,390
+    Q278,370 280,340
+    Q282,310 278,260
+    Q275,220 268,180
+    L262,130
+    Q260,120 255,120
+    Z
+  " fill="url(#yBody)" filter="url(#yShadow)"/>
 
-  <path d="M140,100 Q135,300 138,520" stroke="rgba(255,255,255,0.18)" stroke-width="1" fill="none"/>
-  <path d="M260,100 Q265,300 262,520" stroke="rgba(0,0,0,0.06)" stroke-width="1" fill="none"/>
+  <path d="
+    M145,120
+    Q140,120 138,130 L132,180
+    Q125,220 122,260
+    Q118,310 120,340
+    Q122,370 128,390
+    L135,420
+    Q128,450 125,480
+    Q120,530 120,570
+    Q120,610 128,640
+    Q135,660 150,668
+    L250,668
+    Q265,660 272,640
+    Q280,610 280,570
+    Q280,530 275,480
+    Q272,450 265,420
+    L272,390
+    Q278,370 280,340
+    Q282,310 278,260
+    Q275,220 268,180
+    L262,130
+    Q260,120 255,120
+    Z
+  " fill="url(#yShine)"/>
+
+  <ellipse cx="200" cy="560" rx="60" ry="80" fill="url(#yLiquid)"/>
 
   <!-- Cap -->
-  <rect x="175" y="30" width="50" height="25" rx="6" fill="url(#lCapGrad)"/>
-  <rect x="185" y="20" width="30" height="15" rx="8" fill="#C88C00"/>
-  <ellipse cx="200" cy="20" rx="12" ry="4" fill="#E0A820"/>
+  <rect x="162" y="82" width="76" height="42" rx="6" fill="url(#yCap)"/>
+  <rect x="170" y="70" width="60" height="18" rx="10" fill="#E0D8C8"/>
+  <ellipse cx="200" cy="70" rx="25" ry="6" fill="#E8E0D0"/>
+  <rect x="165" y="118" width="70" height="6" rx="3" fill="rgba(0,0,0,0.06)"/>
 
-  <path d="M275,85 L285,85" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+  <!-- Brand label area -->
+  <rect x="138" y="210" width="124" height="200" rx="8" fill="rgba(255,255,255,0.12)"/>
 
-  <!-- Window -->
-  <ellipse cx="200" cy="420" rx="55" ry="70" fill="url(#lLiquidGrad)" opacity="0.35"/>
-  <ellipse cx="200" cy="420" rx="55" ry="70" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <!-- Logo -->
+  <text x="200" y="250" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" font-style="italic">it's</text>
+  <text x="200" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="28" font-weight="900" fill="white" letter-spacing="2">smile</text>
+  <path d="M175,285 Q200,300 225,285" stroke="white" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <text x="175" y="260" text-anchor="end" font-family="Arial,sans-serif" font-size="10" font-weight="700" fill="rgba(255,255,255,0.9)">妙可净</text>
 
-  <!-- Lemon illustration -->
-  <g transform="translate(200,195)" opacity="0.95">
-    <!-- Lemon fruit -->
-    <ellipse cx="0" cy="-10" rx="35" ry="28" fill="#FFE040" transform="rotate(-15)"/>
-    <ellipse cx="0" cy="-10" rx="33" ry="26" fill="none" stroke="#F0C800" stroke-width="1" transform="rotate(-15)"/>
-    <!-- Lemon tip -->
-    <ellipse cx="32" cy="-18" rx="6" ry="4" fill="#FFD830" transform="rotate(-15)"/>
-    <!-- Lemon highlight -->
-    <ellipse cx="-8" cy="-18" rx="15" ry="8" fill="rgba(255,255,255,0.3)" transform="rotate(-20)"/>
-    <!-- Half lemon slice -->
-    <circle cx="-30" cy="15" r="22" fill="#FFF3A0"/>
-    <circle cx="-30" cy="15" r="20" fill="#FFE860"/>
-    <circle cx="-30" cy="15" r="16" fill="#FFF0A0" opacity="0.6"/>
-    <!-- Slice segments -->
-    <line x1="-30" y1="-3" x2="-30" y2="33" stroke="#FFDA40" stroke-width="1"/>
-    <line x1="-46" y1="9" x2="-14" y2="21" stroke="#FFDA40" stroke-width="1"/>
-    <line x1="-46" y1="21" x2="-14" y2="9" stroke="#FFDA40" stroke-width="1"/>
-    <line x1="-44" y1="2" x2="-16" y2="28" stroke="#FFDA40" stroke-width="1"/>
-    <line x1="-44" y1="28" x2="-16" y2="2" stroke="#FFDA40" stroke-width="1"/>
-    <!-- Leaves -->
-    <ellipse cx="20" cy="-35" rx="12" ry="5" fill="#5DAE5F" transform="rotate(-40,20,-35)"/>
-    <ellipse cx="10" cy="-30" rx="10" ry="4" fill="#4D9E4F" transform="rotate(-60,10,-30)"/>
-    <line x1="15" y1="-32" x2="20" y2="-35" stroke="#3D8E3F" stroke-width="1"/>
-    <!-- Water drops -->
-    <circle cx="15" cy="-5" r="2.5" fill="rgba(255,255,255,0.6)"/>
-    <circle cx="8" cy="5" r="2" fill="rgba(255,255,255,0.5)"/>
-  </g>
+  <text x="200" y="320" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">Explore the cleaning</text>
+  <text x="200" y="335" text-anchor="middle" font-family="Arial,sans-serif" font-size="10" fill="rgba(255,255,255,0.85)" font-style="italic">power of nature</text>
 
-  <!-- Brand name -->
-  <text x="200" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="white" letter-spacing="4">妙可净</text>
-  <text x="200" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.9)" font-style="italic" letter-spacing="1">it's smile</text>
+  <!-- Tea Tree leaf icon -->
+  <circle cx="200" cy="370" r="22" fill="rgba(255,255,255,0.2)" stroke="white" stroke-width="1.5"/>
+  <path d="M195,358 Q188,368 192,380 Q195,385 200,386 Q205,385 208,380 Q212,368 205,358 Q200,354 195,358Z" fill="#4CAF50"/>
+  <path d="M192,362 Q186,370 190,378" fill="none" stroke="#4CAF50" stroke-width="1.5"/>
 
-  <text x="200" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="2">柠檬去油洗洁精</text>
+  <text x="200" y="405" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.8)">Tea Tree Oil</text>
 
-  <rect x="155" y="390" width="90" height="22" rx="11" fill="rgba(255,255,255,0.25)"/>
-  <text x="200" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="600">天然柠檬 强效去油</text>
+  <!-- Product info -->
+  <text x="200" y="450" text-anchor="middle" font-family="Arial,sans-serif" font-size="11" font-weight="700" fill="white">99%天然植物精萃*</text>
 
-  <text x="200" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white">500ml</text>
+  <text x="200" y="480" text-anchor="middle" font-family="Arial,sans-serif" font-size="9" fill="rgba(255,255,255,0.7)">LINGERIE LIQUID DETERGENT</text>
+  <text x="200" y="500" text-anchor="middle" font-family="Arial,sans-serif" font-size="13" font-weight="700" fill="white" letter-spacing="2">妙可净内衣洗衣液</text>
 
-  <line x1="155" y1="525" x2="245" y2="525" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
-  <text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">本草洗护 全净呵护</text>
+  <text x="200" y="620" text-anchor="middle" font-family="Arial,sans-serif" font-size="14" font-weight="600" fill="white">255 mL (8.6 fl oz)</text>
+
+  <ellipse cx="200" cy="665" rx="60" ry="3" fill="rgba(255,255,255,0.15)"/>
 </svg>
