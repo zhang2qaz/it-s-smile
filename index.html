@@ -40,7 +40,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="images/product-lavender.svg" alt="妙可净真丝羊毛洗衣液" class="hero-product-img">
+            <img src="images/product-purple.png" alt="妙可净真丝羊毛洗衣液" class="hero-product-img">
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@
             </div>
           </div>
           <div class="hero-image">
-            <img src="images/product-lemon.svg" alt="妙可净内衣洗衣液" class="hero-product-img">
+            <img src="images/product-yellow.png" alt="妙可净内衣洗衣液" class="hero-product-img">
           </div>
         </div>
       </div>
@@ -73,8 +73,8 @@
             </div>
           </div>
           <div class="hero-image" style="display:flex;gap:0;">
-            <img src="images/product-lemon.svg" alt="妙可净内衣洗衣液" class="hero-product-img" style="height:340px;transform:translateX(20px);">
-            <img src="images/product-lavender.svg" alt="妙可净真丝羊毛洗衣液" class="hero-product-img" style="height:340px;transform:translateX(-20px);">
+            <img src="images/product-yellow.png" alt="妙可净内衣洗衣液" class="hero-product-img" style="height:340px;transform:translateX(20px);">
+            <img src="images/product-purple.png" alt="妙可净真丝羊毛洗衣液" class="hero-product-img" style="height:340px;transform:translateX(-20px);">
           </div>
         </div>
       </div>
@@ -157,7 +157,7 @@
         <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px;">
           <!-- 紫色款 -->
           <div style="background:linear-gradient(135deg,#f3e8ff,#e9d5ff);border-radius:16px;padding:32px;text-align:center;">
-            <img src="images/product-lavender.svg" alt="真丝羊毛洗衣液" style="height:200px;margin-bottom:16px;">
+            <img src="images/product-purple.png" alt="真丝羊毛洗衣液" style="height:200px;margin-bottom:16px;">
             <h3 style="color:#7B3FA8;font-size:1.2rem;">真丝羊毛洗衣液</h3>
             <p style="color:#666;margin:12px 0 16px;font-size:0.9rem;">深入洁净 · 护色防缩 · 柔软蓬松</p>
             <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
@@ -170,7 +170,7 @@
           </div>
           <!-- 黄色款 -->
           <div style="background:linear-gradient(135deg,#fefce8,#fef08a);border-radius:16px;padding:32px;text-align:center;">
-            <img src="images/product-lemon.svg" alt="内衣洗衣液" style="height:200px;margin-bottom:16px;">
+            <img src="images/product-yellow.png" alt="内衣洗衣液" style="height:200px;margin-bottom:16px;">
             <h3 style="color:#D89010;font-size:1.2rem;">内衣洗衣液</h3>
             <p style="color:#666;margin:12px 0 16px;font-size:0.9rem;">深入去渍 · 抑菌除螨 · 柔软亲肤</p>
             <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;">
@@ -212,13 +212,13 @@
       <p style="opacity:0.8;margin-bottom:32px;">99%天然植物精萃 · 洗护合一 · 护衣如护肤</p>
       <div style="display:flex;gap:24px;justify-content:center;flex-wrap:wrap;">
         <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;min-width:200px;">
-          <img src="images/product-lavender.svg" alt="真丝羊毛洗衣液" style="height:120px;margin-bottom:12px;">
+          <img src="images/product-purple.png" alt="真丝羊毛洗衣液" style="height:120px;margin-bottom:12px;">
           <div style="font-size:1rem;font-weight:600;">真丝羊毛洗衣液</div>
           <div style="font-size:1.5rem;font-weight:800;margin:8px 0;">¥1,999</div>
           <button class="btn" style="background:white;color:#7B3FA8;font-weight:700;width:100%;" onclick="cart.addItem(1)">立即购买</button>
         </div>
         <div style="background:rgba(255,255,255,0.1);border-radius:16px;padding:24px 32px;min-width:200px;">
-          <img src="images/product-lemon.svg" alt="内衣洗衣液" style="height:120px;margin-bottom:12px;">
+          <img src="images/product-yellow.png" alt="内衣洗衣液" style="height:120px;margin-bottom:12px;">
           <div style="font-size:1rem;font-weight:600;">内衣洗衣液</div>
           <div style="font-size:1.5rem;font-weight:800;margin:8px 0;">¥1,999</div>
           <button class="btn" style="background:white;color:#D89010;font-weight:700;width:100%;" onclick="cart.addItem(2)">立即购买</button>
@@ -281,8 +281,6 @@
   <script src="js/app.js"></script>
   <script>
     // Init
-    const cart = new CartManager();
-    initHeroCarousel();
     renderProductCards('featured-products');
 
     // ========== 200+ User Reviews ==========

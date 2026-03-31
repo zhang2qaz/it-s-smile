@@ -280,10 +280,18 @@ function initHeader() {
 }
 
 // ========== Hero Slider ==========
-function initHeroSlider() {
+function initHeroCarousel() {
   const slides = document.querySelectorAll('.hero-slide');
-  const dots = document.querySelectorAll('.hero-dot');
   if (slides.length === 0) return;
+
+  // Generate dots dynamically
+  const dotsContainer = document.getElementById('hero-dots');
+  if (dotsContainer) {
+    dotsContainer.innerHTML = slides.length > 1
+      ? Array.from(slides).map((_, i) => `<span class="hero-dot${i === 0 ? ' active' : ''}" data-index="${i}"></span>`).join('')
+      : '';
+  }
+  const dots = document.querySelectorAll('.hero-dot');
 
   let current = 0;
   let interval;
@@ -334,7 +342,7 @@ function renderProductCards(containerId, productIds) {
     <div class="product-card" onclick="window.location.href='product-detail.html?id=${p.id}'">
       <div class="product-card-image ${getColorClass(p.color)}">
         ${p.badge ? `<span class="product-badge ${getBadgeClass(p.badge)}">${getBadgeText(p.badge)}</span>` : ''}
-        <img class="product-card-img" src="images/product-${p.color === 'lavender' ? 'lavender' : 'lemon'}.svg" alt="${p.name}">
+        <img class="product-card-img" src="images/product-${p.color === 'lavender' ? 'purple' : 'yellow'}.png" alt="${p.name}">
       </div>
       <div class="product-card-body">
         <div class="product-card-title">${p.name}</div>
@@ -373,7 +381,7 @@ function renderCart() {
   itemsContainer.innerHTML = cart.items.map(item => `
     <div class="cart-item">
       <div class="cart-item-image ${getColorClass(item.color)}">
-        <div style="font-size:1.5rem;">📦</div>
+        <img src="images/product-${item.color === 'lavender' ? 'purple' : 'yellow'}.png" alt="${item.name}" style="height:80px;width:auto;object-fit:contain;">
       </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.name}</div>
@@ -742,7 +750,7 @@ function renderProductDetail() {
   document.getElementById('product-detail-container').innerHTML = `
     <div class="product-detail-grid">
       <div class="product-gallery ${bgClass}">
-        <img class="product-detail-img" src="images/product-${product.color === 'lavender' ? 'lavender' : 'lemon'}.svg" alt="${product.name}">
+        <img class="product-detail-img" src="images/product-${product.color === 'lavender' ? 'purple' : 'yellow'}.png" alt="${product.name}">
       </div>
       <div class="product-detail-info">
         <h1>${product.name}</h1>
@@ -815,7 +823,7 @@ function buyNow(productId) {
 // ========== Initialize on DOM Ready ==========
 document.addEventListener('DOMContentLoaded', () => {
   initHeader();
-  initHeroSlider();
+  initHeroCarousel();
 
   // Auto-init based on page
   if (document.getElementById('home-products')) {
