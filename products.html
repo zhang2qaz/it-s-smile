@@ -79,7 +79,7 @@
         <div class="product-card" onclick="window.location.href='product-detail.html?id=${p.id}'">
           <div class="product-card-image ${getColorClass(p.color)}">
             ${p.badge ? `<span class="product-badge ${getBadgeClass(p.badge)}">${getBadgeText(p.badge)}</span>` : ''}
-            <div class="product-visual ${getBottleClass(p.color)}">${getBottleLabel(p.color)}<br><small>it's smile</small></div>
+            <img class="product-card-img" src="images/product-${p.color === 'lavender' ? 'lavender' : 'lemon'}.svg" alt="${p.name}">
           </div>
           <div class="product-card-body">
             <div class="product-card-title">${p.name}</div>

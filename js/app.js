@@ -324,7 +324,7 @@ function renderProductCards(containerId, productIds) {
     <div class="product-card" onclick="window.location.href='product-detail.html?id=${p.id}'">
       <div class="product-card-image ${getColorClass(p.color)}">
         ${p.badge ? `<span class="product-badge ${getBadgeClass(p.badge)}">${getBadgeText(p.badge)}</span>` : ''}
-        <div class="product-visual ${getBottleClass(p.color)}">${getBottleLabel(p.color)}<br><small>it's smile</small></div>
+        <img class="product-card-img" src="images/product-${p.color === 'lavender' ? 'lavender' : 'lemon'}.svg" alt="${p.name}">
       </div>
       <div class="product-card-body">
         <div class="product-card-title">${p.name}</div>
@@ -732,9 +732,7 @@ function renderProductDetail() {
   document.getElementById('product-detail-container').innerHTML = `
     <div class="product-detail-grid">
       <div class="product-gallery ${bgClass}">
-        <div class="product-visual-large ${bottleClass}" style="width:200px;height:300px;">
-          妙可净<br><small>it's smile</small>
-        </div>
+        <img class="product-detail-img" src="images/product-${product.color === 'lavender' ? 'lavender' : 'lemon'}.svg" alt="${product.name}">
       </div>
       <div class="product-detail-info">
         <h1>${product.name}</h1>

@@ -1,0 +1,100 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 600" width="400" height="600">
+  <defs>
+    <linearGradient id="bagBody" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#D4A8F0"/>
+      <stop offset="30%" stop-color="#B87FDB"/>
+      <stop offset="60%" stop-color="#9B5FC4"/>
+      <stop offset="100%" stop-color="#7B3FA8"/>
+    </linearGradient>
+    <linearGradient id="bagShine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="rgba(255,255,255,0.3)"/>
+      <stop offset="50%" stop-color="rgba(255,255,255,0.05)"/>
+      <stop offset="100%" stop-color="rgba(255,255,255,0.15)"/>
+    </linearGradient>
+    <linearGradient id="capGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#8B5CC0"/>
+      <stop offset="100%" stop-color="#6B3FA0"/>
+    </linearGradient>
+    <linearGradient id="liquidGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#C9A0E8"/>
+      <stop offset="100%" stop-color="#A070D0"/>
+    </linearGradient>
+    <filter id="shadow1">
+      <feDropShadow dx="4" dy="8" stdDeviation="12" flood-color="rgba(107,63,160,0.3)"/>
+    </filter>
+    <clipPath id="bagClip">
+      <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z"/>
+    </clipPath>
+  </defs>
+
+  <!-- Shadow -->
+  <ellipse cx="200" cy="575" rx="100" ry="12" fill="rgba(107,63,160,0.15)"/>
+
+  <!-- Bag body -->
+  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#bagBody)" filter="url(#shadow1)"/>
+
+  <!-- Bag shine overlay -->
+  <path d="M120,80 L130,60 Q135,50 145,48 L255,48 Q265,50 270,60 L280,80 L290,180 Q295,380 285,480 Q280,520 270,540 Q260,555 240,560 L160,560 Q140,555 130,540 Q120,520 115,480 Q105,380 110,180 Z" fill="url(#bagShine)"/>
+
+  <!-- Left fold line -->
+  <path d="M140,100 Q135,300 138,520" stroke="rgba(255,255,255,0.15)" stroke-width="1" fill="none"/>
+
+  <!-- Right fold line -->
+  <path d="M260,100 Q265,300 262,520" stroke="rgba(0,0,0,0.08)" stroke-width="1" fill="none"/>
+
+  <!-- Cap/spout area -->
+  <rect x="175" y="30" width="50" height="25" rx="6" fill="url(#capGrad)"/>
+  <rect x="185" y="20" width="30" height="15" rx="8" fill="#7B4FB0"/>
+  <ellipse cx="200" cy="20" rx="12" ry="4" fill="#9B6FCF"/>
+
+  <!-- Tear notch -->
+  <path d="M275,85 L285,85" stroke="rgba(255,255,255,0.5)" stroke-width="2"/>
+
+  <!-- Window showing liquid -->
+  <ellipse cx="200" cy="420" rx="55" ry="70" fill="url(#liquidGrad)" opacity="0.4"/>
+  <ellipse cx="200" cy="420" rx="55" ry="70" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+
+  <!-- Lavender sprigs illustration -->
+  <g transform="translate(200,200)" opacity="0.9">
+    <!-- Stem 1 -->
+    <line x1="-20" y1="40" x2="-15" y2="-30" stroke="#E8D0F8" stroke-width="2"/>
+    <circle cx="-15" cy="-30" r="4" fill="#D4A0F0"/>
+    <circle cx="-17" cy="-22" r="3.5" fill="#D4A0F0"/>
+    <circle cx="-16" cy="-14" r="3" fill="#C890E8"/>
+    <circle cx="-18" cy="-6" r="3" fill="#C890E8"/>
+    <!-- Stem 2 -->
+    <line x1="0" y1="40" x2="2" y2="-40" stroke="#E8D0F8" stroke-width="2"/>
+    <circle cx="2" cy="-40" r="4.5" fill="#D4A0F0"/>
+    <circle cx="1" cy="-32" r="4" fill="#D4A0F0"/>
+    <circle cx="2" cy="-24" r="3.5" fill="#C890E8"/>
+    <circle cx="1" cy="-16" r="3" fill="#C890E8"/>
+    <circle cx="2" cy="-8" r="3" fill="#BC80E0"/>
+    <!-- Stem 3 -->
+    <line x1="20" y1="40" x2="18" y2="-25" stroke="#E8D0F8" stroke-width="2"/>
+    <circle cx="18" cy="-25" r="4" fill="#D4A0F0"/>
+    <circle cx="19" cy="-17" r="3.5" fill="#C890E8"/>
+    <circle cx="18" cy="-9" r="3" fill="#C890E8"/>
+    <!-- Leaves -->
+    <ellipse cx="-12" cy="20" rx="8" ry="3" fill="#90C890" transform="rotate(-30,-12,20)"/>
+    <ellipse cx="14" cy="25" rx="8" ry="3" fill="#90C890" transform="rotate(25,14,25)"/>
+    <ellipse cx="-5" cy="30" rx="7" ry="2.5" fill="#80B880" transform="rotate(-15,-5,30)"/>
+  </g>
+
+  <!-- Brand name -->
+  <text x="200" y="310" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="800" fill="white" letter-spacing="4">妙可净</text>
+  <text x="200" y="335" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" font-weight="600" fill="rgba(255,255,255,0.85)" font-style="italic" letter-spacing="1">it's smile</text>
+
+  <!-- Product name -->
+  <text x="200" y="375" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="white" letter-spacing="2">薰衣草婴幼儿洗衣液</text>
+
+  <!-- Feature badge -->
+  <rect x="155" y="390" width="90" height="22" rx="11" fill="rgba(255,255,255,0.25)"/>
+  <text x="200" y="405" text-anchor="middle" font-family="Arial, sans-serif" font-size="11" fill="white" font-weight="600">植物配方 温和亲肤</text>
+
+  <!-- Volume -->
+  <text x="200" y="510" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" font-weight="700" fill="white">500ml</text>
+
+  <!-- Bottom decorative line -->
+  <line x1="155" y1="525" x2="245" y2="525" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+  <text x="200" y="545" text-anchor="middle" font-family="Arial, sans-serif" font-size="10" fill="rgba(255,255,255,0.7)">轻松呵护 亲肤好衣</text>
+</svg>

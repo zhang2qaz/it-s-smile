@@ -1993,6 +1993,49 @@ input:focus, select:focus, textarea:focus {
   }
 }
 
+/* --- Real Image Styles --- */
+.hero-product-img {
+  height: 380px;
+  width: auto;
+  filter: drop-shadow(0 16px 40px rgba(0,0,0,0.2));
+  transition: transform 0.5s ease;
+}
+
+.hero-product-img:hover {
+  transform: scale(1.05);
+}
+
+.product-card-img {
+  height: 220px;
+  width: auto;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover .product-card-img {
+  transform: scale(1.08) translateY(-4px);
+}
+
+.product-detail-img {
+  height: 420px;
+  width: auto;
+  filter: drop-shadow(0 12px 30px rgba(0,0,0,0.15));
+}
+
+.ingredient-img {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 16px;
+  border-radius: 50%;
+}
+
+img.testimonial-avatar {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 20px;
+  display: block;
+}
+
 /* --- Utilities --- */
 .text-center { text-align: center; }
 .text-right { text-align: right; }
